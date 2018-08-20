@@ -107,7 +107,9 @@ git branch -d nome_da_branch_b
 * Enviando para o GitHub:
 ```
 git remote add origin git@github.com:nome-de-usuario/repository.git
-git push -u origin master
+git push -u origin master  
+ou para forçar 
+git push -f origin master 
 ```
 
 * Obtendo alterações/atualizações do GitHub:
