@@ -109,7 +109,7 @@ git branch -d nome_da_branch_b
 > É importante salientar que você não precisa excluir uma branch secundária. É uma boa prática manter essas branchs secundárias. Basta sempre da master você criar uma secundária com nome e versão.
 
 * Clonando um repositório de sua conta no GitHub:
-```gitbash
+```bash
 #1ª opção: este comando vai clonar o repositório repository_xyz dentro da pasta corrente:
 git clone git@github.com:nome-de-usuario/repository_xyz.git
 
@@ -138,12 +138,12 @@ git push
 ```
 
 > Não é uma boa prática fazer o push diretamente para a branch master do repositório forkado antes de receber o aceite do proprietário do repositório principal (upstream). O ideal é fazer o seguinte:
-- 1) realize a conexão com o repositório **upstream**
-- 2) realize o **pull** para obter o conteúdo atualizado do repositório **upstream**
-- 3) cria uma nova branch e realize as alterações nesta branch secundária
-- 4) faça o **add** e o **commit** na branch secundária
-- 5) ainda na branch secundária realize um **push** da branch secundária no repositório **origin** forkado
-  ```
+- Realize a conexão com o repositório **upstream**
+- Realize o **pull** para obter o conteúdo atualizado do repositório **upstream**
+- Crie uma nova branch e realize as alterações nesta branch secundária
+- Faça o **add** e o **commit** na branch secundária
+- Ainda na branch secundária realize um **push** da branch secundária no repositório **origin** forkado
+  ```bash
   git push origin nova_branch_secundaria
   ```
 
