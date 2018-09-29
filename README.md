@@ -98,6 +98,7 @@ git merge nome_da_branch_b
 ```
 > Este comando unifica a branch_b com a branch_a. 
 Para que a unificação ocorra você deve sair da branch_b e mudar para a branch_a antes de executar merge.
+> Caso ocorra algum conflito em um arquivo será necessário remover as linhas adicionadas que indicam as diferenças, ou seja, você precisa resolver o conflito. Depois de resolver o conflito dentro do arquivo você precissa adicionar este arquivo modificado na "Staging Area" e depois realizar outro commit. Importante: tudo o que está entre **\<\<\< HEAD (Current)** e **===** faz parte das alterações feita na branch_a (current) e tudo o que está entre **==** e **\>\>\> branch_b (Incoming)** faz parte das alterações feitas na branch_b (branch que está "entrando" na branch corrente).
 
 * Apagando uma branch já unificada:
 ```
