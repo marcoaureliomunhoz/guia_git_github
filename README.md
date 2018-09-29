@@ -108,7 +108,7 @@ git branch -d nome_da_branch_b
 
 > É importante salientar que você não precisa excluir uma branch secundária. É uma boa prática manter essas branchs secundárias. Basta sempre da master você criar uma secundária com nome e versão.
 
-* Enviando para o GitHub:
+* Enviando para o repositório origin e para a branch master do GitHub:
 ```
 git remote add origin git@github.com:nome-de-usuario/repository.git
 git push -u origin master  
@@ -116,9 +116,24 @@ ou para forçar
 git push -f origin master 
 ```
 
-* Obtendo alterações/atualizações do GitHub:
+> É possível se conectar a outro repositório remoto que foi forkado para empurrar nossas alterações para o fork. Para isso temos que fazer:
+```
+#1) conexão com o outro repositório
+git remote add nome_do_outro_repositorio git@github.com:nome-de-outro-usuario/other_repository.git
+#2) aqui estamos pegando as alterações da branch master do outro repositório 
+git pull nome_do_outro_repositorio master
+#3) aqui estamos enviando/empurrando alterações para o repositório forkado
+git push
+```
+
+* Obtendo alterações/atualizações do repositório origin e da branch master que estão no GitHub:
 ```
 git pull origin master
+```
+
+* Listando as conexões remotas:
+```
+git remote -v
 ```
 
 * Ferramenta gráfica para verificar alterações:
