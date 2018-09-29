@@ -117,11 +117,13 @@ git push -f origin master
 ```
 
 > É possível se conectar a outro repositório remoto que foi forkado para empurrar nossas alterações para o fork. Para isso temos que fazer:
-```
+```bash
 #1) conexão com o outro repositório
 git remote add nome_do_outro_repositorio git@github.com:nome-de-outro-usuario/other_repository.git
+
 #2) aqui estamos pegando as alterações da branch master do outro repositório 
 git pull nome_do_outro_repositorio master
+
 #3) aqui estamos enviando/empurrando alterações para o repositório forkado
 git push
 ```
