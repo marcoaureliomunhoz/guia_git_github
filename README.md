@@ -106,6 +106,8 @@ Para que a unificação ocorra você deve sair da branch_b e mudar para a branch
 git branch -d nome_da_branch_b
 ```
 
+> É importante salientar que você não precisa excluir uma branch secundária. É uma boa prática manter essas branchs secundárias. Basta sempre da master você criar uma secundária com nome e versão.
+
 * Enviando para o GitHub:
 ```
 git remote add origin git@github.com:nome-de-usuario/repository.git
