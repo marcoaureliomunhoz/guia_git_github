@@ -108,11 +108,20 @@ git branch -d nome_da_branch_b
 
 > É importante salientar que você não precisa excluir uma branch secundária. É uma boa prática manter essas branchs secundárias. Basta sempre da master você criar uma secundária com nome e versão.
 
+* Clonando um repositório de sua conta no GitHub:
+```gitbash
+#1ª opção: este comando vai clonar o repositório repository_xyz dentro da pasta corrente:
+git clone git@github.com:nome-de-usuario/repository_xyz.git
+
+#2ª opção: este comando vai clonar o repositório repository_xyz dentro da pasta corrente com outro nome:
+git clone git@github.com:nome-de-usuario/repository_xyz.git outro_nome
+``` 
+
 * Enviando para o repositório origin e para a branch master do GitHub:
-```
+```bash
 git remote add origin git@github.com:nome-de-usuario/repository.git
 git push -u origin master  
-ou para forçar 
+#ou para forçar 
 git push -f origin master 
 ```
 
@@ -124,9 +133,19 @@ git remote add nome_do_outro_repositorio git@github.com:nome-de-outro-usuario/ot
 #2) aqui estamos pegando as alterações da branch master do outro repositório 
 git pull nome_do_outro_repositorio master
 
-#3) aqui estamos enviando/empurrando alterações para o repositório forkado
+#3) aqui estamos enviando/empurrando alterações para a branch master do repositório forkado
 git push
 ```
+
+> Não é uma boa prática fazer o push diretamente para a branch master do repositório forkado antes de receber o aceite do proprietário do repositório principal (upstream). O ideal é fazer o seguinte:
+- 1) realize a conexão com o repositório **upstream**
+- 2) realize o **pull** para obter o conteúdo atualizado do repositório **upstream**
+- 3) cria uma nova branch e realize as alterações nesta branch secundária
+- 4) faça o **add** e o **commit** na branch secundária
+- 5) ainda na branch secundária realize um **push** da branch secundária no repositório **origin** forkado
+  ```
+  git push origin nova_branch_secundaria
+  ```
 
 * Obtendo alterações/atualizações do repositório origin e da branch master que estão no GitHub:
 ```
