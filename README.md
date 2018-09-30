@@ -74,7 +74,11 @@ git log
 
 * Listando as branchs (ramificações):
 ```
+#1) Listando só as branchs locais
 git branch
+
+#2) Listando todas as branchs, locais e remotas
+git branch -a
 ```
 
 * Criando uma branch (ramificação):
