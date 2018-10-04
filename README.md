@@ -69,7 +69,10 @@ git rm nome-arquivo-objeto
 
 * Exibindo o log:
 ```
+#1) Todos os commits:
 git log
+
+#2) Último commit:
 git log -1
 ```
 
