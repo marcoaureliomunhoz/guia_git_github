@@ -70,6 +70,12 @@ git rm nome-arquivo-objeto
 * Exibindo o log:
 ```
 git log
+git log -1
+```
+
+* Exibindo o sumário:
+```
+git show --summary
 ```
 
 * Listando as branchs (ramificações):
